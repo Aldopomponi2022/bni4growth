@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BNI 4Growth · Il Tempo del Coraggio · 11 giugno 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;700;800;900&family=Barlow:wght@400;500;600;700&family=Fraunces:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0f2240;
+    --navy-deep: #07142a;
+    --navy-mid: #1a3158;
+    --orange: #F97316;
+    --orange-bright: #FB923C;
+    --orange-deep: #C2410C;
+    --cream: #FAF7F0;
+    --cream-dim: rgba(250, 247, 240, 0.72);
+    --gold: #EAB308;
+    --teal: #14B8A6;
+    --blue: #3B82F6;
+    --purple: #A78BFA;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #1a1a1a;
+    font-family: 'Barlow', sans-serif;
+    color: var(--cream);
+    padding: 24px;
+    line-height: 1.5;
+  }
+
+  .poster {
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--navy);
+    box-shadow: 0 40px 100px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.04);
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* ---------- HERO SECTION ---------- */
+  .hero {
+    position: relative;
+    background: linear-gradient(180deg, var(--navy-deep) 0%, var(--navy) 60%, var(--navy-mid) 100%);
+    overflow: hidden;
+    padding: 28px 56px 0;
+  }
+
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    font-size: 13px;
+    color: var(--cream-dim);
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(250, 247, 240, 0.12);
+    padding-bottom: 16px;
+    position: relative;
+    z-index: 3;
+  }
+
+  .topbar .brand { color: var(--orange); }
+  .topbar .session::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--orange);
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+    transform: translateY(-1px);
+  }
+
+  .hero-svg-wrap {
+    position: relative;
+    margin: 24px -56px 0;
+    line-height: 0;
+  }
+
+  .hero-svg-wrap svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .title-block {
+    position: absolute;
+    bottom: 32px;
+    left: 56px;
+    right: 56px;
+    z-index: 4;
+  }
+
+  .eyebrow {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    font-size: 14px;
+    color: var(--orange);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    display: inline-block;
+    padding: 6px 14px;
+    border: 1.5px solid var(--orange);
+    border-radius: 2px;
+    background: rgba(15, 34, 64, 0.6);
+    backdrop-filter: blur(4px);
+  }
+
+  h1.title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: clamp(56px, 9vw, 96px);
+    line-height: 0.9;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: var(--cream);
+    margin-bottom: 14px;
+    text-shadow: 0 4px 30px rgba(0,0,0,0.5);
+  }
+
+  h1.title .accent {
+    color: var(--orange);
+    display: block;
+  }
+
+  .subtitle {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(18px, 2.4vw, 24px);
+    color: var(--cream);
+    max-width: 600px;
+  }
+
+  /* ---------- DATE STRIP ---------- */
+  .date-strip {
+    background: var(--orange);
+    color: var(--navy);
+    padding: 18px 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 18px;
+    position: relative;
+  }
+
+  .date-strip::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: repeating-linear-gradient(90deg, var(--navy) 0 8px, transparent 8px 16px);
+  }
+
+  /* ---------- MANIFESTO OPENING ---------- */
+  .manifesto-open {
+    padding: 70px 56px 50px;
+    text-align: center;
+    position: relative;
+  }
+
+  .quando-list {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--cream-dim);
+    margin-bottom: 36px;
+    line-height: 1.7;
+  }
+
+  .quando-list span {
+    display: block;
+  }
+
+  .big-claim {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: clamp(38px, 5.5vw, 56px);
+    text-transform: uppercase;
+    line-height: 1;
+    color: var(--cream);
+    margin-bottom: 28px;
+    letter-spacing: -0.01em;
+  }
+
+  .big-claim .strike {
+    color: var(--orange);
+    position: relative;
+    display: inline-block;
+  }
+
+  .body-text {
+    max-width: 580px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--cream-dim);
+  }
+
+  .body-text strong {
+    color: var(--cream);
+    font-weight: 700;
+  }
+
+  .direction-line {
+    margin-top: 24px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: var(--orange-bright);
+    font-size: 17px;
+  }
+
+  /* ---------- SPEAKERS ---------- */
+  .speakers {
+    padding: 30px 56px 50px;
+  }
+
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: var(--cream-dim);
+  }
+
+  .section-label::before, .section-label::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: rgba(250, 247, 240, 0.12);
+  }
+
+  .speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .speaker-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-left: 4px solid;
+    padding: 22px 22px 22px 26px;
+    transition: all 0.2s ease;
+  }
+
+  .speaker-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateX(2px);
+  }
+
+  .speaker-card.pomponi { border-color: var(--orange); }
+  .speaker-card.poggia { border-color: var(--blue); }
+  .speaker-card.aina { border-color: var(--teal); }
+  .speaker-card.romeo { border-color: var(--gold); }
+  .speaker-card.anzaldi {
+    border-color: var(--purple);
+    grid-column: 1 / -1;
+  }
+
+  .speaker-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: var(--cream);
+    margin-bottom: 8px;
+  }
+
+  .speaker-card.pomponi .speaker-name { color: var(--orange); }
+  .speaker-card.poggia .speaker-name { color: var(--blue); }
+  .speaker-card.aina .speaker-name { color: var(--teal); }
+  .speaker-card.romeo .speaker-name { color: var(--gold); }
+  .speaker-card.anzaldi .speaker-name { color: var(--purple); }
+
+  .speaker-topic {
+    font-size: 15px;
+    color: var(--cream-dim);
+    line-height: 1.5;
+  }
+
+  /* ---------- SPEED 121 ---------- */
+  .speed-box {
+    margin: 0 56px 50px;
+    background: linear-gradient(135deg, var(--orange) 0%, var(--orange-deep) 100%);
+    color: var(--navy);
+    padding: 28px 32px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .speed-box::before {
+    content: "121";
+    position: absolute;
+    right: -20px;
+    top: -30px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 200px;
+    color: rgba(15, 34, 64, 0.08);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .speed-icon {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 56px;
+    line-height: 1;
+    color: var(--navy);
+    position: relative;
+    z-index: 1;
+  }
+
+  .speed-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .speed-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 26px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin-bottom: 4px;
+  }
+
+  .speed-desc {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  /* ---------- PROGRAMMA ---------- */
+  .programma {
+    padding: 0 56px 50px;
+  }
+
+  .timeline {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 0;
+  }
+
+  .timeline-row {
+    display: contents;
+  }
+
+  .timeline-time {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    color: var(--orange);
+    padding: 12px 16px 12px 0;
+    border-right: 2px solid rgba(250, 247, 240, 0.12);
+    text-align: right;
+  }
+
+  .timeline-event {
+    padding: 12px 0 12px 20px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--cream);
+    border-bottom: 1px solid rgba(250, 247, 240, 0.06);
+    position: relative;
+  }
+
+  .timeline-event::before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: var(--cream);
+    border-radius: 50%;
+  }
+
+  .timeline-event.highlight {
+    color: var(--orange);
+    font-weight: 700;
+  }
+
+  .timeline-event.highlight::before {
+    background: var(--orange);
+    box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.2);
+  }
+
+  /* ---------- ANTI-POSITIONING ---------- */
+  .manifesto-block {
+    background: var(--navy-deep);
+    padding: 60px 56px;
+    text-align: center;
+    position: relative;
+    border-top: 1px solid rgba(250, 247, 240, 0.06);
+    border-bottom: 1px solid rgba(250, 247, 240, 0.06);
+  }
+
+  .manifesto-block::before, .manifesto-block::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--orange);
+  }
+  .manifesto-block::before { top: 24px; left: 24px; border-right: 0; border-bottom: 0; }
+  .manifesto-block::after { bottom: 24px; right: 24px; border-left: 0; border-top: 0; }
+
+  .manifesto-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: clamp(28px, 4vw, 40px);
+    text-transform: uppercase;
+    line-height: 1.1;
+    color: var(--cream);
+    max-width: 660px;
+    margin: 0 auto;
+    letter-spacing: -0.005em;
+  }
+
+  .manifesto-text .negative {
+    color: var(--cream-dim);
+    font-weight: 500;
+    text-decoration: line-through;
+    text-decoration-color: rgba(249, 115, 22, 0.5);
+    text-decoration-thickness: 2px;
+  }
+
+  .manifesto-text .positive {
+    color: var(--orange);
+    display: block;
+    margin-top: 16px;
+  }
+
+  /* ---------- CTA ---------- */
+  .cta {
+    padding: 50px 56px;
+    background: var(--navy);
+  }
+
+  .cta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 36px;
+  }
+
+  .cta-item {
+    text-align: center;
+  }
+
+  .cta-icon {
+    width: 44px;
+    height: 44px;
+    margin: 0 auto 12px;
+    border: 2px solid var(--orange);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--orange);
+  }
+
+  .cta-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cream-dim);
+    margin-bottom: 6px;
+  }
+
+  .cta-value {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--cream);
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+
+  .cta-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: var(--orange);
+    color: var(--navy);
+    padding: 22px 32px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-button:hover {
+    background: var(--orange-bright);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(249, 115, 22, 0.35);
+  }
+
+  .cta-button .arrow {
+    display: inline-block;
+    margin-left: 8px;
+    transition: transform 0.2s ease;
+  }
+  .cta-button:hover .arrow { transform: translateX(4px); }
+
+  /* ---------- FINAL TAGLINE ---------- */
+  .final-tagline {
+    background: var(--navy-deep);
+    padding: 50px 56px;
+    text-align: center;
+    border-top: 3px solid var(--orange);
+  }
+
+  .final-tagline .line1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 500;
+    font-size: clamp(28px, 4vw, 38px);
+    text-transform: uppercase;
+    color: var(--cream-dim);
+    line-height: 1;
+    letter-spacing: 0.02em;
+  }
+
+  .final-tagline .line2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: clamp(56px, 9vw, 88px);
+    text-transform: uppercase;
+    color: var(--orange);
+    line-height: 1;
+    margin-top: 8px;
+    letter-spacing: -0.01em;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .footer {
+    background: var(--navy-deep);
+    padding: 24px 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cream-dim);
+    border-top: 1px solid rgba(250, 247, 240, 0.08);
+  }
+
+  .footer .brand-mark { color: var(--orange); }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 720px) {
+    body { padding: 0; }
+    .poster { box-shadow: none; }
+    .hero { padding: 22px 24px 0; }
+    .title-block { left: 24px; right: 24px; bottom: 24px; }
+    .date-strip { padding: 14px 24px; flex-direction: column; gap: 6px; font-size: 14px; text-align: center; }
+    .manifesto-open, .speakers, .programma, .cta, .final-tagline, .footer { padding-left: 24px; padding-right: 24px; }
+    .speed-box { margin-left: 24px; margin-right: 24px; padding: 22px; }
+    .speakers-grid { grid-template-columns: 1fr; }
+    .speaker-card.anzaldi { grid-column: auto; }
+    .cta-grid { grid-template-columns: 1fr; gap: 16px; }
+    .footer { flex-direction: column; gap: 8px; text-align: center; }
+    .timeline { grid-template-columns: 70px 1fr; }
+    .manifesto-block::before, .manifesto-block::after { width: 24px; height: 24px; }
+  }
+
+  /* ---------- PRINT ---------- */
+  @media print {
+    body { background: white; padding: 0; }
+    .poster { box-shadow: none; max-width: 100%; }
+    .speaker-card:hover, .cta-button:hover { transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="poster">
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="topbar">
+      <span class="brand">BNI 4Growth · 2026</span>
+      <span class="session">Sessione 03</span>
+    </div>
+
+    <!-- HERO SVG: figure leaping into the rising sun -->
+    <div class="hero-svg-wrap">
+      <svg viewBox="0 0 880 480" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Una figura in salto verso il sole nascente">
+        <defs>
+          <!-- Sky gradient -->
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#07142a"/>
+            <stop offset="55%" stop-color="#0f2240"/>
+            <stop offset="100%" stop-color="#1f3a6b"/>
+          </linearGradient>
+
+          <!-- Sun radial -->
+          <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#FED7AA" stop-opacity="1"/>
+            <stop offset="35%" stop-color="#FB923C" stop-opacity="1"/>
+            <stop offset="70%" stop-color="#F97316" stop-opacity="1"/>
+            <stop offset="100%" stop-color="#C2410C" stop-opacity="1"/>
+          </radialGradient>
+
+          <!-- Outer halo -->
+          <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#F97316" stop-opacity="0.5"/>
+            <stop offset="50%" stop-color="#F97316" stop-opacity="0.15"/>
+            <stop offset="100%" stop-color="#F97316" stop-opacity="0"/>
+          </radialGradient>
+
+          <!-- Ground gradient -->
+          <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#07142a" stop-opacity="0"/>
+            <stop offset="40%" stop-color="#07142a" stop-opacity="0.85"/>
+            <stop offset="100%" stop-color="#000" stop-opacity="1"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Sky background -->
+        <rect width="880" height="480" fill="url(#sky)"/>
+
+        <!-- Atmospheric stars (small white dots, sparse) -->
+        <g fill="#FAF7F0" opacity="0.6">
+          <circle cx="80" cy="50" r="0.8"/>
+          <circle cx="180" cy="90" r="1.2"/>
+          <circle cx="260" cy="40" r="0.6"/>
+          <circle cx="120" cy="160" r="0.9"/>
+          <circle cx="350" cy="80" r="0.7"/>
+          <circle cx="700" cy="60" r="1"/>
+          <circle cx="800" cy="120" r="0.8"/>
+          <circle cx="760" cy="40" r="0.6"/>
+          <circle cx="60" cy="220" r="0.7"/>
+          <circle cx="220" cy="200" r="0.5"/>
+          <circle cx="820" cy="200" r="0.9"/>
+          <circle cx="680" cy="180" r="0.6"/>
+        </g>
+
+        <!-- Halo behind sun -->
+        <circle cx="500" cy="330" r="280" fill="url(#halo)"/>
+
+        <!-- Sun -->
+        <circle cx="500" cy="330" r="160" fill="url(#sunGlow)"/>
+
+        <!-- Subtle sun rim glow -->
+        <circle cx="500" cy="330" r="160" fill="none" stroke="#FED7AA" stroke-width="1" opacity="0.4"/>
+
+        <!-- Far horizon mountains (silhouette layer 1) -->
+        <path d="M 0,400 L 80,360 L 160,380 L 240,340 L 340,365 L 440,335 L 540,355 L 640,330 L 740,360 L 820,340 L 880,360 L 880,480 L 0,480 Z"
+              fill="#0a1a35" opacity="0.85"/>
+
+        <!-- Mid cliff (left, dark) - the "before" cliff -->
+        <path d="M 0,380 L 0,480 L 280,480 L 280,420 L 240,410 L 200,400 L 160,395 L 120,398 L 80,388 L 40,382 Z"
+              fill="#040d1d"/>
+
+        <!-- Far cliff (right, the destination) -->
+        <path d="M 580,440 L 880,440 L 880,480 L 580,480 Z"
+              fill="#040d1d"/>
+
+        <!-- Ground gradient overlay -->
+        <rect x="0" y="380" width="880" height="100" fill="url(#ground)"/>
+
+        <!-- LEAPING FIGURE - silhouette mid-jump -->
+        <g transform="translate(380, 360)">
+          <!-- Shadow / glow behind figure for depth -->
+          <ellipse cx="40" cy="-18" rx="55" ry="70" fill="#07142a" opacity="0.3" filter="blur(6px)"/>
+
+          <!-- Body group: leaping forward, captured at apex -->
+          <g fill="#040d1d">
+            <!-- Head -->
+            <circle cx="62" cy="-78" r="11"/>
+
+            <!-- Neck/upper torso -->
+            <path d="M 56,-68 Q 50,-55 48,-40 Q 47,-28 52,-20 Q 64,-16 72,-22 Q 76,-32 73,-50 Q 70,-62 67,-69 Z"/>
+
+            <!-- Lower torso / hips -->
+            <path d="M 48,-22 Q 46,-12 50,-2 Q 60,4 72,2 Q 78,-8 76,-22 Q 64,-16 52,-20 Z"/>
+
+            <!-- FRONT LEG (leading, bent at knee, thrust forward) -->
+            <!-- Thigh -->
+            <path d="M 58,0 Q 70,4 84,2 Q 96,0 104,-6 Q 100,-14 88,-12 Q 74,-8 60,-4 Z"/>
+            <!-- Shin -->
+            <path d="M 96,-8 Q 108,-6 116,-2 Q 122,4 118,10 Q 110,8 102,4 Q 96,-2 96,-8 Z"/>
+            <!-- Foot -->
+            <ellipse cx="118" cy="6" rx="10" ry="4" transform="rotate(15 118 6)"/>
+
+            <!-- BACK LEG (trailing, extended back) -->
+            <!-- Thigh -->
+            <path d="M 50,-2 Q 38,4 24,12 Q 14,18 10,26 Q 18,28 28,22 Q 42,12 54,4 Z"/>
+            <!-- Shin -->
+            <path d="M 12,22 Q 4,32 -4,40 Q -10,46 -6,50 Q 2,46 10,38 Q 18,28 14,24 Z"/>
+            <!-- Foot -->
+            <ellipse cx="-6" cy="48" rx="9" ry="3.5" transform="rotate(-25 -6 48)"/>
+
+            <!-- FRONT ARM (driving forward) -->
+            <!-- Upper arm -->
+            <path d="M 60,-58 Q 74,-58 88,-54 Q 96,-48 92,-42 Q 80,-46 66,-50 Z"/>
+            <!-- Forearm -->
+            <path d="M 88,-50 Q 100,-46 110,-38 Q 114,-32 108,-30 Q 98,-36 86,-42 Z"/>
+            <!-- Hand -->
+            <circle cx="112" cy="-32" r="4.5"/>
+
+            <!-- BACK ARM (swinging back for balance) -->
+            <!-- Upper arm -->
+            <path d="M 54,-58 Q 42,-54 30,-46 Q 24,-40 28,-36 Q 38,-42 50,-50 Z"/>
+            <!-- Forearm -->
+            <path d="M 28,-40 Q 18,-32 10,-22 Q 6,-16 12,-14 Q 22,-22 32,-34 Z"/>
+            <!-- Hand -->
+            <circle cx="10" cy="-16" r="4"/>
+          </g>
+
+          <!-- Motion lines behind figure -->
+          <g stroke="#FB923C" stroke-width="1.5" opacity="0.4" stroke-linecap="round">
+            <line x1="-40" y1="-30" x2="-10" y2="-30"/>
+            <line x1="-30" y1="-10" x2="0" y2="-10"/>
+            <line x1="-25" y1="-50" x2="0" y2="-50"/>
+            <line x1="-50" y1="0" x2="-15" y2="0"/>
+          </g>
+        </g>
+
+        <!-- Subtle light rays from sun (very faint) -->
+        <g stroke="#FED7AA" stroke-width="1" opacity="0.12">
+          <line x1="500" y1="330" x2="200" y2="80"/>
+          <line x1="500" y1="330" x2="800" y2="100"/>
+          <line x1="500" y1="330" x2="100" y2="200"/>
+          <line x1="500" y1="330" x2="850" y2="220"/>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Title overlay -->
+    <div class="title-block">
+      <span class="eyebrow">Giovedì 11 Giugno 2026</span>
+      <h1 class="title">
+        Il Tempo
+        <span class="accent">del Coraggio</span>
+      </h1>
+      <p class="subtitle">Smetti di aspettare di essere pronto.</p>
+    </div>
+  </header>
+
+  <!-- ============ DATE STRIP ============ -->
+  <div class="date-strip">
+    <span>📅 Giovedì 11 Giugno 2026</span>
+    <span>⏱ 10:00 — 17:00</span>
+    <span>📍 [Location da definire]</span>
+  </div>
+
+  <!-- ============ MANIFESTO OPENING ============ -->
+  <section class="manifesto-open">
+    <div class="quando-list">
+      <span>"Quando sarò pronto."</span>
+      <span>"Quando avrò più tempo."</span>
+      <span>"Quando le condizioni saranno giuste."</span>
+    </div>
+
+    <h2 class="big-claim">
+      E intanto<br>
+      <span class="strike">il tempo passa.</span>
+    </h2>
+
+    <p class="body-text">
+      Le occasioni sfumano. Le idee restano nel cassetto.<br>
+      L'11 giugno, alla terza sessione di <strong>BNI 4Growth 2026</strong>, smettiamo di raccontarci che il problema è il tempo. <strong>Perché il tempo non manca: manca il coraggio di usarlo.</strong>
+    </p>
+
+    <p class="direction-line">
+      Quattro voci, una giornata intera, un'unica direzione:<br>
+      <strong style="color: var(--cream); font-style: normal; font-family: 'Barlow Condensed'; font-weight: 800; text-transform: uppercase; font-size: 22px; letter-spacing: 0.02em;">trasformare ore in risultati,<br>dubbi in decisioni, attese in azione.</strong>
+    </p>
+  </section>
+
+  <!-- ============ SPEAKERS ============ -->
+  <section class="speakers">
+    <div class="section-label">Le voci della giornata</div>
+
+    <div class="speakers-grid">
+
+      <article class="speaker-card poggia">
+        <div class="speaker-name">Guido Poggia</div>
+        <p class="speaker-topic">Perché il tempo non si gestisce: si gestiscono urgenze, persone ed emozioni.</p>
+      </article>
+
+      <article class="speaker-card aina">
+        <div class="speaker-name">Margherita Aina</div>
+        <p class="speaker-topic">Cosa significa davvero il tempo per te, e perché è la chiave delle tue priorità.</p>
+      </article>
+
+      <article class="speaker-card pomponi">
+        <div class="speaker-name">Aldo Pomponi</div>
+        <p class="speaker-topic">Il coraggio: l'unico antidoto all'incertezza che ti tiene fermo.</p>
+      </article>
+
+      <article class="speaker-card romeo">
+        <div class="speaker-name">Maurizio Romeo</div>
+        <p class="speaker-topic">Oltre i blocchi: integrare le zone d'ombra e osare diventare chi puoi essere.</p>
+      </article>
+
+      <article class="speaker-card anzaldi">
+        <div class="speaker-name">Pino Anzaldi · Chiusura</div>
+        <p class="speaker-topic">La sintesi che ti porti a casa.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ SPEED 121 ============ -->
+  <div class="speed-box">
+    <div class="speed-icon">⚡</div>
+    <div class="speed-content">
+      <div class="speed-title">+ Speed 121</div>
+      <div class="speed-desc">Tavoli da 6 persone · 36 minuti · Connessioni che valgono mesi di networking ordinario.</div>
+    </div>
+  </div>
+
+  <!-- ============ PROGRAMMA ============ -->
+  <section class="programma">
+    <div class="section-label">Il programma</div>
+
+    <div class="timeline">
+      <div class="timeline-time">10:00</div>
+      <div class="timeline-event">Arrivi e registrazioni</div>
+
+      <div class="timeline-time">10:30</div>
+      <div class="timeline-event">Guido Poggia · Gestire urgenze, persone ed emozioni</div>
+
+      <div class="timeline-time">11:30</div>
+      <div class="timeline-event">Margherita Aina · Il significato del tempo</div>
+
+      <div class="timeline-time">12:30</div>
+      <div class="timeline-event">Pranzo</div>
+
+      <div class="timeline-time">13:30</div>
+      <div class="timeline-event highlight">Speed 121 · Tavoli da 6</div>
+
+      <div class="timeline-time">14:30</div>
+      <div class="timeline-event">Aldo Pomponi · Il coraggio come antidoto</div>
+
+      <div class="timeline-time">15:30</div>
+      <div class="timeline-event">Pausa caffè</div>
+
+      <div class="timeline-time">15:40</div>
+      <div class="timeline-event">Maurizio Romeo · Oltre i blocchi</div>
+
+      <div class="timeline-time">16:40</div>
+      <div class="timeline-event">Pino Anzaldi · Chiusura e sintesi</div>
+
+      <div class="timeline-time">17:00</div>
+      <div class="timeline-event">Saluti</div>
+    </div>
+  </section>
+
+  <!-- ============ ANTI-POSITIONING MANIFESTO ============ -->
+  <section class="manifesto-block">
+    <p class="manifesto-text">
+      Questa <span class="negative">non</span> è una giornata
+      per chi vuole "saperne di più<br>sul time management".
+      <span class="positive">È una giornata per chi è stanco di rimandare.</span>
+    </p>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="cta">
+    <div class="cta-grid">
+      <div class="cta-item">
+        <div class="cta-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <div class="cta-label">Quando</div>
+        <div class="cta-value">Giov 11 Giu 2026<br>10:00 — 17:00</div>
+      </div>
+
+      <div class="cta-item">
+        <div class="cta-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div class="cta-label">Dove</div>
+        <div class="cta-value">[Location]<br>Piemonte Nord</div>
+      </div>
+
+      <div class="cta-item">
+        <div class="cta-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <div class="cta-label">Posti</div>
+        <div class="cta-value">Limitati<br>Iscrivi subito</div>
+      </div>
+    </div>
+
+    <a href="#iscrizione" class="cta-button">
+      Iscriviti ora <span class="arrow">→</span>
+    </a>
+  </section>
+
+  <!-- ============ FINAL TAGLINE ============ -->
+  <section class="final-tagline">
+    <div class="line1">Non aspettare di essere pronto.</div>
+    <div class="line2">Inizia.</div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <span><span class="brand-mark">●</span> BNI 4Growth · Piemonte Nord</span>
+    <span>2026 · Sessione 03</span>
+  </footer>
+
+</div>
+
+</body>
+</html>
